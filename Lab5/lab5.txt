@@ -1,0 +1,79 @@
+CS2110 Lab 5						   Spring 2014
+
+
+Put your answers in this file and submit it under the T-Square assignment.
+
+Shen Yang
+
+Problem 1
+---------
+A) The BILL 9000 computer has 16 address wires and has a 8 bit word size.
+
+The addressability of this memory is...
+8 bit
+
+
+
+The address space of this memory is...
+2^16
+
+
+B) The NOOB 2110 computer has 7 address wires and has a 8 bit word size.
+However memory addresses 0x00 - 0x1F are not able to be written to
+or read from.
+
+The addressability of this memory is...
+8 bit
+
+
+
+The address space of this memory is...
+2^7-2^5
+
+
+
+(Some things to think about)
+- What is the addressability of your laptop computer?  64 bit
+- What is the address space of your laptop computer?   2^64
+
+
+Problem 2
+---------
+
+What is the difference between combinational and sequential logic?
+A combinational logic circuit is one that the output depends only on the current input, not on any previous inputs. An easy example would be a decoder -- you have n inputs, and 2^n outputs, one for each possible set of inputs. What the output is doesn't have anything to do with what the previous output was. 
+A sequential logic circuit depends on the previous input. Memory is one of the easiest examples of this - it's output is what it's last input was. If you take away the input (depending on how it's built), then its output will stay the same as long as the material electrical properties allow. Its output depends on what its previous input was. 
+Another example of a sequential logic circuit is a master-slave flip-flop. You input a value, and its output remains the same until the next clock cycle, at which the output changes to what the previous input was, and the input is whatever you decide to put in. 
+
+
+
+Complete the following table by marking an "x" where applicable.
+
+|========================================|
+| Component | Combinational | Sequential |
+|========================================|
+| ALU       |      x        |            |
+| AND GATE  |	   x        |            |
+| REGISTER  |               |     x      |
+| MEMORY    |    	        |     x      |
+| DECODER   |      x	    |            |
+| RS LATCH  |      	        |	  x      |
+=========================================|
+
+
+Problem 3
+---------
+Make a 2-bit addressable memory that has a address space of 8. (i.e. there are 8 addresses each holding 2 bits)
+You do not need to turn this circuit in, but it is highly recommend that you actually make it.
+
+
+How many bits are there for the output of your memory?
+2
+
+
+How many bits are there for the address input of the memory?
+2
+
+
+
+Make sure to ask the TA's if you have any questions!

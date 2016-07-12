@@ -1,0 +1,80 @@
+==================================================================================================================
+CS2110                                             Lab #13                                             Spring 2014
+==================================================================================================================
+
+Objective: Reinforcing your knowledge of recursion in assembly!
+
+Don't hesitate to ask the TA's for help. If you are stuck on
+one part, or not clear about what it's asking, feel free to
+ask. Remember, we are here to help you :)
+
+This is not a timed lab so talk with your friends, use the book, use a TA, etc.
+
+Notice: For all of these problems assume the stack is located at xF000.
+Do not check if the stack is reached its upper or lower bound.
+
+Do as much of the lab as you need to in order to feel comfortable with recursion in assembly. 
+There's a lot of work in this lab, so don't feel obligated to do it all if you don't have time!
+
+
+1) Code this recursive assembly function, making sure you adhere to the calling convention.
+
+http://en.wikipedia.org/wiki/McCarthy_91_function
+
+Save this as lab13part1.asm
+
+
+2)
+Here is some recursive assembly code.  Its specifications are mentioned in the comments below, and the comments on each line tell you where that instruction is in memory.
+
+; Preconditions 
+;        X, the parameter, is on top of the stack
+; Postconditions 
+;        BRANDONFUNC(X) is on top of the stack.
+; The state of the registers used when this is called are as follows if necessary.
+
+; R1 = 1, R2 = 2, R3 = 3, R4 = 4, R5 = 5, R6 = xEFFF, R7 = x3002.
+BRANDONFUNC 
+		ADD R6, R6, #-1 		;x3010
+	  ADD R6, R6, #-2 		;x3011
+	  STR R5, R6, #0 			;x3012
+	  STR R7, R6, #1			;x3013
+	  ADD R5, R6, #-1			;x3014
+	  LDR R0, R6, 3   		;x3015
+    ADD R0, R0, -4			;x3016
+    BRZP WORK						;x3017
+    ND R1, R1, 0				;x3018
+    ADD R1, R1, -2			;x3019
+    STR R1, R6, #2  		;x301A
+    BR RETURN						;x301B
+WORK 	ADD R0, R0, #-1		;x301C
+    ADD R6, R6, #-1 		;x301D
+    STR R0, R6, #0  		;x301E
+	  JSR BRANDONFUNC			;x301F
+    LDR R1, R6, #0  		;x3020
+	  LDR R0, R6, #1			;x3021
+	  ADD R6, R6, #2  		;x3022
+	  ADD R1, R1, R1			;x3023
+	  ADD R1, R0, R1			;x3024
+	  ADD R1, R1, 6				;x3025
+	  STR R1, R6, 2   		;x3026
+RETURN  LDR R5, R6, #0	;x3027
+	  LDR R7, R6, #1			;x3028
+	  ADD R6, R6, #2			;x3029
+	  RET									;x302A
+
+a) Comment each line of code and figure out what it is doing in terms of high level code.
+
+b) Trace the stack for input X = 12. Draw a stack (on paper somewhere) and put the bottom of the stack at memory address xF000. You should assume the caller has already pushed the parameter onto the stack. This parameter is located on top of the stack, at memory location xEFFF, so put 12 at address xEFFF. Trace through the code ste by step, updating the stack as the program changes it. Stop tracing the stack when you have reached address x301B. Start at the bottom of the stack and grow upwards. If you don't know what value a memory address is, then leave its slot blank.
+
+c) What is the return value for input X = 9?
+
+d) What does the BASECASE do in high level terms? (Don't say it sets R1 to 44 or something; don't write things that are obvious from looking at the code)
+
+e) Write code in a higher level language (C/Java/Python) that does the same computation as the assembly code above.
+
+
+Deliverables
+------------
+lab13.txt
+lab13part1.asm

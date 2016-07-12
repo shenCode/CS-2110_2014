@@ -1,0 +1,23 @@
+.orig x3000
+		LD R0, A		| x2006
+		LD R1, B		| x2106
+		ADD R2, R1, R0	| x1440
+		NOT R2, R2		| x94BF
+		ADD R2, R0, R2	| x1402
+		ADD R2, R2, 1	| x14A1
+		HALT			| xF025
+		
+		A .fill 45
+		B .fill 60
+.end
+
+CC is n.
+
+x5020	| AND R0, R0, 0
+x5260	| AND R1, R1, 0
+x127f	| ADD R1, R1, -1
+x03fe	| BR P, -2
+x2606	| LD, R3, 6
+x60c0	| LDR R0, R3, 0
+x3010	| ST R0, 16
+xe002	| LEA R0, 2

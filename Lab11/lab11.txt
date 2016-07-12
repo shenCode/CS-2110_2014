@@ -1,0 +1,44 @@
+======================================================================
+CS2110                                                         Lab 11                                                            Spring 2014
+======================================================================
+ 
+Objective: Learning how to code some simple programs in LC-3 Assembly.
+ 
+Don't hesitate to ask the TA's for help. If you are stuck on
+one part, or not clear about what it's asking, feel free to
+ask. Remember, we are here to help you :)
+ 
+This is not a timed lab so talk with your friends, use the book, use a TA, etc.
+ 
+BE SURE TO ENABLE TRUE TRAPS BEFORE YOU RUN YOUR CODE.
+ 
+Problem 1.
+----------
+Write a TRAP that multiplies the (positive) values stored in R0 and R1 and puts the result in R0.
+ 
+Specifications
+--------------
+This trap should be callable by saying TRAP x30 in your code.
+ 
+Preconditions:
+R0 and R1 contains the two things you want to multiply together
+ 
+Postconditions:
+R0 contains R0 * R1
+No other registers (except R7) should be modified (Don't be a goober! ;))
+ 
+Save this program as lab11part1.asm.
+ 
+ 
+Problem 2.
+----------
+Write a TRAP that takes in input from the user and echoes it back to them in lowercase.
+ 
+For instance if they type HELLO WORLD! you should echo back hello world!
+ 
+Specifications
+--------------
+This trap should be callable by saying TRAP x40 in your code.
+ 
+ 
+Save this program as lab11part2.asm.

@@ -1,0 +1,43 @@
+#===============================================================================#
+#			  CS2110 Spring 2014 Lab #3				#
+#===============================================================================#
+
+1. DeMorgan's Law
+
+Bill has already alluded to this in lecture, but here's something cool.
+There is a property of boolean logic called DeMorgan's Law that states:
+
+"The negation of a conjunction is the disjunction of the negations."
+
+Or, simply put,
+
+!(A && B) == (!A || !B)
+
+For the first part of this assignment, you will be building a simple circuit to
+demonstrate this principle.
+
+In the template we have provided, fill in the missing logic gates and connect the
+tunnels to the inputs. 
+
+For the first gate, just use a simple OR gate.
+For the second gate, use an AND gate, and invert the inputs and output.
+
+You will notice the outputs for both gates are the same.
+
+This is DeMorgan's law in action.
+
+
+2. Transistors
+
+Fill in the provided template circuits NAND and NOT with transistors to create 
+the specified logic gates. 
+
+There is only one stipulation, and that is you MUST follow this convention:
+
+P-type transistors go on TOP of the diagram, connected to power
+N-type transistors go on BOTTOM, connected to ground.
+
+When you are finished with NAND and NOT, copy the transistors from each into the
+AND circuit and combine them to make an AND gate.
+
+If you have any questions, ask away!

@@ -1,0 +1,66 @@
+======================================================================
+CS2110                           Lab #4                    Spring 2014
+======================================================================
+
+For each of the truth tables below, write a K-map for the values,
+reduce the logic to a boolean expression, then implement the logic as
+a subcircuit in Logisim:
+
+      +-------+
+  A --|       |
+  B --| Logic |-- Out
+  C --|       |
+ (D)--|       |
+      +-------+
+
+Submit the subcircuits in a file "lab4.circ" on T-Square.
+
+Remember to ask the TA's about anything you don't understand!
+
+    1. Easy truth table
+
+        A | B | C | O
+       ---+---+---+---
+        0 | 0 | 0 | 0
+        0 | 0 | 1 | 0
+        0 | 1 | 0 | 0
+        0 | 1 | 1 | 1
+        1 | 0 | 0 | 1
+        1 | 0 | 1 | 1
+        1 | 1 | 0 | 0
+        1 | 1 | 1 | 1
+	
+    2. Medium truth table
+
+        A | B | C | O
+       ---+---+---+---
+        0 | 0 | 0 | 1
+        0 | 0 | 1 | 0
+        0 | 1 | 0 | 0
+        0 | 1 | 1 | 1
+        1 | 0 | 0 | 1
+        1 | 0 | 1 | 1
+        1 | 1 | 0 | 1
+        1 | 1 | 1 | 1
+	
+    3. Hard truth table
+
+        A | B | C | D | O
+       ---+---+---+---+---
+        0 | 0 | 0 | 0 | 1
+        0 | 0 | 0 | 1 | 0
+        0 | 0 | 1 | 0 | 1
+        0 | 0 | 1 | 1 | 0
+        0 | 1 | 0 | 0 | 0
+        0 | 1 | 0 | 1 | 0
+        0 | 1 | 1 | 0 | 1
+        0 | 1 | 1 | 1 | 0
+        1 | 0 | 0 | 0 | 1
+        1 | 0 | 0 | 1 | 1
+        1 | 0 | 1 | 0 | 1
+        1 | 0 | 1 | 1 | 1
+        1 | 1 | 0 | 0 | 1
+        1 | 1 | 0 | 1 | 0
+        1 | 1 | 1 | 0 | 0
+        1 | 1 | 1 | 1 | 0
+

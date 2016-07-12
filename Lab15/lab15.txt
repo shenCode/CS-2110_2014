@@ -1,0 +1,67 @@
+====================================================================================================================
+CS2110                                             Lab #15                                               Spring 2014
+====================================================================================================================
+
+Objective: LEARN MORE C YEP I'M C-RIOUS
+
+Don't hesitate to ask the TA's for help. If you are stuck on one part, or not clear about what it's asking, feel free
+to ask. Remember, we are here to help you :)
+
+This is not a timed lab so talk with your friends, use the book, use a TA, etc.
+
+
+POINTERS I
+----------
+1) The "address of" (&) operator can be used to get the ADDRESS OF a variable in memory, that is a pointer pointing
+at the variable. Recall that LC-3 assembly had an instruction named LEA. The "address of" operator is similiar to LEA.
+
+Consider this snippet of C code:
+
+	int a = 3;
+	int* b = &a; /* b now points at a */
+	*b = 29;
+	printf("%d\n", a);
+
+Will print out 29.
+
+Trace through the following series of statements and keep track of the given values.
+(YES, AGAIN! You need to understand pointers inside and out!)
+
+Use the table to help you out here and tell me what changed. (Just write the single thing that changed)
+
+Statement      |    a    |    b    |    c     |    pa    |    pb
+---------------------------------------------------------------------
+int a = 30;    |         |         |          |          |
+int b = a + 5; |         |         |          |          |
+int c = 2;     |         |         |          |          |
+int* pa = &a;  |         |         |          |          |
+int* pb = &b;  |         |         |          |          |
+c = 10;        |         |         |          |          |
+*pb = 27;      |         |         |          |          |
+*pb = c;       |         |         |          |          |
+a = 2;	     |         |         |          |          |
+*pa = 3;       |         |         |          |          |
+*pb = *pa;     |         |         |          |          |
+*pa = &c;      |         |         |          |          |
+pa = pb;       |         |         |          |          |
+*pa = 15;      |         |         |          |          |
+
+Now, tell me what prints out when this printf statement happens.
+
+	printf("%d %d %d %d", a, b, c, *pa, *pb);
+
+
+
+2) Declare a structure called blecko that contains the following
+
+an int for weight
+an int pointer for grades
+a short for shorts
+and a double for happiness
+
+b) Now, how would you use a typedef with this struct to make a structure type named student?
+(i.e. I could declare one by typing "student bobby;" without needing the struct keyword)
+
+c) When do you use the . vs -> operator when dealing with structures?
+
+Put your answers in this file and rename it to lab17.txt
